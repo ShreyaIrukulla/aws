@@ -1,11 +1,12 @@
+
 provider "aws" {
-        region="us-east-2"
+  region = "us-east-1"
 }
+
 resource "aws_vpc" "main" {
-  cidr_block       = "10.0.0.0/16"
-  instance_tenancy = "default"
+  cidr_block = "10.0.0.0/18"
 
   tags = {
-    Name = "main vpc"
+    Name = "Main VPC"
   }
 }
